@@ -18,7 +18,7 @@
     {%- assign should_redirect = template != blank -%}
 
     {%- if settings.storefront_hostname != blank and should_redirect -%}
-      <link rel="canonical" href="{{ shop.metafields.custom.headless_domain }}">
+      <link rel="canonical" href="https://{{ settings.storefront_hostname }}{{ request.path }}">
     {% else %}
       <link rel="canonical" href="{{ canonical_url }}">
     {% endif %}
